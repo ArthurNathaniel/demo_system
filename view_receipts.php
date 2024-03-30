@@ -75,13 +75,40 @@ if (!isset($_SESSION['user_id'])) {
         }
     }
 
-    // Query to retrieve all receipts
-    $sql = "SELECT * FROM receipts";
-    $result = $conn->query($sql);
+    // Process search form submission
+    if (isset($_POST['search'])) {
+        $search_term = $_POST['search_term'];
+
+        // Query to retrieve receipts based on search term
+        $sql_search = "SELECT * FROM receipts WHERE 
+                        client_name LIKE '%$search_term%' OR 
+                        payment_method LIKE '%$search_term%' OR 
+                        other_method LIKE '%$search_term%' OR 
+                        payment_type LIKE '%$search_term%' OR 
+                        amount LIKE '%$search_term%' OR 
+                        amount_words LIKE '%$search_term%' OR 
+                        date LIKE '%$search_term%'";
+        $result = $conn->query($sql_search);
+    } else {
+        // Query to retrieve all receipts in descending order of ID
+        $sql = "SELECT * FROM receipts ORDER BY id DESC";
+        $result = $conn->query($sql);
+    }
 
     if ($result->num_rows > 0) {
         echo "<div class='manage_all'>";
         echo "<h2>All Receipts</h2>";
+
+        // Search Form
+        
+        echo "<form method='post'>";
+        echo "<div class='search'>";
+        echo "<input type='text' name='search_term' placeholder='Enter search term'>";
+        echo "<button type='submit' name='search'>Search</button>";
+        echo "</div>";
+        echo "</form>";
+       
+
         echo "<table>";
         echo "<tr><th>ID</th><th>Client Name</th><th>Payment Method</th><th>Other Method</th><th>Payment Type</th><th>Amount</th><th>Amount Words</th><th>Date</th><th>Action</th></tr>";
         while ($row = $result->fetch_assoc()) {

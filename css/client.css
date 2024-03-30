@@ -1,5 +1,5 @@
 .admin_all{
-    margin-top: 70px;
+    margin-block: 70px;
     padding: 0 5%;
 }
 .clients_all_title {
@@ -31,10 +31,22 @@
 }
 
 .clients_forms button {
-    height: 50px;
-    background-color: #2a4047;
-    color: #fff;
-    border: none;
-    text-transform: uppercase;
-    margin-bottom: 70px;
+height: 50px;
+            background-color: #e61d31;
+            color: #fff;
+            text-transform: uppercase;
+            font-family: "Caudex", serif;
+            border: none;
+      
+}
+
+@media only screen and (max-width: 1110px) {
+    .clients_grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .clients_forms{
+        width: 100%;
+    }
+   
 }

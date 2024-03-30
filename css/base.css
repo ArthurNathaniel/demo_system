@@ -1,15 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caudex:ital,wght@0,400;0,700;1,400;1,700&family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+font-family: "Public Sans", sans-serif;
 }
 
 body {
-
-    font-family: "DM Sans", sans-serif;
+font-family: "Public Sans", sans-serif;
 
     font-style: normal;
 
@@ -43,12 +42,12 @@ strong {
 }
 
 .logo {
-    height: 250px;
-    width: 250px;
+    height: 100px;
+    width: 100px;
     margin-block: 30px;
     margin-left: auto;
     margin-right: auto;
-    background-image: url(../images/logo.jpeg);
+    background-image: url(../images/logo.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -79,13 +78,13 @@ strong {
 .links h3 {
     padding: 0 10%;
     padding-block: 10px;
-    background-color: #2a4047;
+    background-color: #e61d31;
     text-transform: uppercase;
     color: #fff;
 }
 
 .links a:hover {
-    background-color: #2a40475a;
+    background-color: #e61d315a;
     color: #000;
 }
 
@@ -99,7 +98,7 @@ strong {
     position: absolute;
     z-index: 332;
     position: fixed;
-    background-color: #2a4047;
+    background-color: #e61d31;
     top: 0;
 }
 
@@ -169,7 +168,7 @@ strong {
     margin-bottom: 50px;
     width: 95%;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-color: #2a4047;
+    background-color: #e61d31;
     color: #fff;
 }
 
@@ -215,7 +214,7 @@ th {
 .forms button {
     height: 50px;
     width: 100%;
-    background-color: #2a4047;
+    background-color: #e61d31;
     border: none;
     color: #000;
     text-transform: uppercase;
@@ -223,3 +222,54 @@ th {
     font-weight: 900;
 }
 
+
+.search{
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-block: 50px;
+}
+
+.search input{
+    height: 50px;
+    margin-bottom: 20px;
+    padding-left: 2%;
+    
+}
+
+input:focus{
+    outline: none;
+}
+
+.search button{
+    height: 50px;
+background-color: #e61d31;
+border: none;
+color: #fff;
+text-transform: uppercase;
+font-family: "Caudex", serif;
+}
+
+input[type="submit"]{
+background-color: #e61d31;
+color: #fff;
+text-transform: uppercase;
+    font-family: "Caudex", serif;
+    border: none;
+}
+    
+
+
+@media only screen and (max-width: 1110px) {
+    .sidebar_all {
+        width: 70%;
+    }
+    .revenue_grid{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .revenue{
+        width: 100%;
+    }
+}

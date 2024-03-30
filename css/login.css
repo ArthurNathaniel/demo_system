@@ -5,7 +5,7 @@
 }
 
 .forms_swiper{
-    background-color: #2a4047;
+    background-color: #e61d31;
 }
 .forms{
     width: 100%;
@@ -38,7 +38,7 @@ display: flex;
 }
 
 .logo{
-    border-radius: 50%;
+
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
@@ -55,3 +55,13 @@ display: flex;
     text-align: center;
 }
 
+
+@media only screen and (max-width: 1110px) {
+    .forms_page{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .forms_swiper{
+        display: none;
+    }
+}

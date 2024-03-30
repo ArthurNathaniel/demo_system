@@ -73,7 +73,14 @@ $conn->close();
     <div class="yearly_revenue">
         <h2>Yearly Revenue</h2>
 
-        <table>
+        <!-- Search Form -->
+        <div class="search">
+            <label for="search_year">Search by Year:</label>
+            <input type="text" id="search_year" placeholder="Enter year">
+            <button onclick="searchYear()">Search</button>
+        </div>
+
+        <table id="revenue_table">
             <tr>
                 <th>Year</th>
                 <th>Total Amount</th>
@@ -90,6 +97,27 @@ $conn->close();
             ?>
         </table>
     </div>
+
+    <script>
+        function searchYear() {
+            var input, filter, table, tr, td, i, txtValue;
+            input = document.getElementById("search_year");
+            filter = input.value.toUpperCase();
+            table = document.getElementById("revenue_table");
+            tr = table.getElementsByTagName("tr");
+            for (i = 0; i < tr.length; i++) {
+                td = tr[i].getElementsByTagName("td")[0];
+                if (td) {
+                    txtValue = td.textContent || td.innerText;
+                    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                        tr[i].style.display = "";
+                    } else {
+                        tr[i].style.display = "none";
+                    }
+                }
+            }
+        }
+    </script>
 </body>
 
 </html>

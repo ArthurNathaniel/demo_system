@@ -32,7 +32,6 @@ while ($row = $resultYearly->fetch_assoc()) {
 // Close database connection
 $conn->close();
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -66,7 +65,18 @@ $conn->close();
     <div class="revenue_summary_all">
         <h2>Daily Revenue</h2>
 
-        <table>
+        <!-- Search Form -->
+
+        <form id="search_form">
+            <div class="search">
+                <label for="search_date">Search by Date:</label>
+                <input type="date" id="search_date" name="search_date">
+                <button type="submit">Search</button>
+            </div>
+        </form>
+
+
+        <table id="revenue_table">
             <tr>
                 <th>Date</th>
                 <th>Total Amount</th>
@@ -79,7 +89,7 @@ $conn->close();
                 $date = date('Y-m-d', $currentDate);
                 $total_amount = isset($yearlyRevenue[$date]) ? $yearlyRevenue[$date] : 0;
             ?>
-                <tr>
+                <tr class="revenue_row">
                     <td><?php echo $date; ?></td>
                     <td><?php echo "GH₵ " . $total_amount; ?></td>
                 </tr>
@@ -90,6 +100,24 @@ $conn->close();
             ?>
         </table>
     </div>
+
+    <script>
+        document.getElementById("search_form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            var inputDate = document.getElementById("search_date").value;
+            var table = document.getElementById("revenue_table");
+            var rows = table.getElementsByTagName("tr");
+            for (var i = 1; i < rows.length; i++) {
+                var rowDate = rows[i].getElementsByTagName("td")[0].innerText.trim();
+                if (rowDate === inputDate) {
+                    rows[i].style.display = "";
+                } else {
+                    rows[i].style.display = "none";
+                }
+            }
+        });
+    </script>
 </body>
 
 </html>

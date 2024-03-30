@@ -1,12 +1,4 @@
-<?php
-session_start();
 
-// Check if the user is not logged in, redirect to the login page
-if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
-    exit();
-}
-?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,7 +17,7 @@ if (!isset($_SESSION['username'])) {
 
     <div class="home">
         <div class="logo"></div>
-        <h1>Welcome to Ogazy G. Car Rental</h1>
+        <h1>Welcome to Nathstack Car Rental</h1>
         <div class="powered">
             <p>This system is Powered by <a href="https://wa.link/uhvnz5" target="_blank">Nathstack Tech</a></p>
         </div>
@@ -33,4 +25,3 @@ if (!isset($_SESSION['username'])) {
 </body>
 
 </html>
-\ 

@@ -16,7 +16,7 @@ if (!isset($_SESSION['user_id'])) {
 include 'db.php';
 
 // Fetch invoices from the database
-$sql = "SELECT * FROM invoices";
+$sql = "SELECT * FROM invoices ORDER BY id DESC";
 $result = $conn->query($sql);
 ?>
 

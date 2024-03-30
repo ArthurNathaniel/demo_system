@@ -29,12 +29,12 @@ if (!isset($_SESSION['user_id'])) {
         </div>
         <div class="navbar_details">
             <div class="nav_one">
-                <p><strong>Location: </strong>Airport Roundabout, Opposite DVLA, Ksi</p>
+                <p><strong>Location: </strong>Kumasi</p>
 
-                <p><strong>Tel: </strong>+233 24 910 3331 / +233 59 636 8628</p>
+                <p><strong>Tel: </strong>+233 541 987 478</p>
             </div>
             <div class="nav_two">
-                <p><strong>Email: </strong>info@ogazygcarrentals.com</p>
+                <p><strong>Email: </strong>info@nathstack.tech</p>
             </div>
         </div>
 

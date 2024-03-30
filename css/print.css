@@ -1,5 +1,5 @@
   .navbar {
-      background-color: #2a4047;
+      background-color: #e61d31;
       color: #fff;
       padding: 0 5%;
       padding-block: 10px;
@@ -14,10 +14,10 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background-image: url(../images/logo.jpeg);
+      background-image: url(../images/logo.png);
       background-position: center;
       background-size: cover;
-      border-radius: 50%;
+     
   }
 
   .navbar_details {
@@ -34,7 +34,7 @@
 
   .official button {
       padding: 15px 45px;
-      background-color: #2a4047;
+      background-color: #e61d31;
       margin-block: 30px;
       border: none;
       color: #fff;
@@ -61,7 +61,7 @@
 
   .print_grid strong {
       border-bottom: 0px solid;
-      background-color: #2a4047;
+      background-color: #e61d31;
       padding: 10px;
       color: #fff;
       margin-right: 30px;
@@ -75,12 +75,12 @@
       padding: 15px 45px;
       font-family: "Caudex", serif;
       text-transform: uppercase;
-      background-color: #2a4047;
+      background-color: #e61d31;
       color: #fff;
   }
 
   .footer {
-      background-color: #2a4047;
+      background-color: #e61d31;
       color: #fff;
       padding: 0 5%;
       padding-block: 30px;

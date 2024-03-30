@@ -68,7 +68,7 @@ $conn->close();
 
             <form method="post" action="<?php echo $_SERVER["PHP_SELF"]; ?>">
                 <div class="forms">
-                    <h2>Ogazy G. Car Rentals - Login</h2>
+                    <h2>Nathstack Car Rentals - Login</h2>
                 </div>
                 <div class="error_message">
                     <p>
